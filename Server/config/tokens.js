@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const secret = require("../dotenv").SECRET;
+const secret = require("../config/dotenv").SECRET;
 
 const generateToken = (payload) => {
   const token = jwt.sign({ user: payload }, secret, { expiresIn: "2d" });
