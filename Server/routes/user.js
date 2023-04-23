@@ -29,13 +29,13 @@ router.post("/login", async (req, res) => {
     if (!user)
       return res.status(401).send({
         error: "Unauthorized",
-        message: "Invalid credentials",
+        message: "Invalid user",
       });
     const validate = await user.validatePassword(password);
     if (!validate)
       return res.status(401).send({
         error: "Unauthorized",
-        message: "Invalid credentials",
+        message: "Invalid password",
       });
 
     const payload = {
