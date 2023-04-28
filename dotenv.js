@@ -1,6 +1,6 @@
 require("dotenv").config({ path: "../.env" });
 
-const requiredEnvs = ["SECRET"];
+const requiredEnvs = ["SECRET,API_KEY"];
 
 requiredEnvs.forEach((env) => {
   if (!process.env[env]) {
