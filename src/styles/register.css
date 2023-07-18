@@ -1,0 +1,50 @@
+body {
+  background: url("https://image.tmdb.org/t/p/original/uyi0Ytkkw4pgT4GkYZHdqravjT5.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-register {
+  width: 400px;
+  height: auto;
+  margin: 50px auto;
+  padding: 20px;
+  color: #df6c08;
+  border-radius: 10px;
+
+  background-color: inherit;
+}
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-register {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ffffffb1;
+  border-radius: 5px;
+  background-color: inherit;
+  /* box-shadow: 0 2px 5px rgb(221, 130, 4); */
+}
+
+.button-register {
+  padding: 10px 20px;
+  background-color: #df6c08;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-register:hover {
+  background-color: #af5507;
+}
+
+label {
+  margin-bottom: 5px;
+  text-align: left;
+  font-weight: bold;
+}

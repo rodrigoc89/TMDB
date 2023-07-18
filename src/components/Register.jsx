@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
+
+import "../styles/register.css";
+
 const Register = () => {
+  const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -10,6 +14,7 @@ const Register = () => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:3001/api/users/register", {
+        userName: userName,
         name: name,
         lastName: lastName,
         email: email,
@@ -22,29 +27,45 @@ const Register = () => {
   };
   return (
     <>
-      <div>
-        <form action="" onSubmit={handleSubmit}>
+      <h1>WELCOME TO TMDB</h1>
+      <p>Create your account</p>
+      <div className="container-register">
+        <form action="" onSubmit={handleSubmit} className="form-register">
+          <label>User Name</label>
           <input
+            className="input-register"
             type="text"
-            placeholder="name"
+            onChange={(e) => setUserName(e.target.value)}
+          />
+          <label>Name</label>
+          <input
+            className="input-register"
+            type="text"
             onChange={(e) => setName(e.target.value)}
           />
+          <label>Last Name</label>
           <input
+            className="input-register"
             type="text"
-            placeholder="lastName"
             onChange={(e) => setLastName(e.target.value)}
           />
+          <label>Email</label>
           <input
+            className="input-register"
             type="email"
-            placeholder="email"
             onChange={(e) => setEmail(e.target.value)}
           />
+          <label>Password</label>
           <input
+            className="input-register"
             type="password"
-            placeholder="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <input type="submit" />
+          <input
+            type="button"
+            className="button-register"
+            value={"Create Account"}
+          />
         </form>
       </div>
     </>

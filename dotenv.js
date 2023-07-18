@@ -1,11 +1,6 @@
-require("dotenv").config({ path: "../.env" });
+const Dotenv = require("dotenv-webpack");
 
-const requiredEnvs = ["SECRET,API_KEY"];
-
-requiredEnvs.forEach((env) => {
-  if (!process.env[env]) {
-    throw new Error(`Missing env variable ${env}`);
-  }
-});
-
-module.exports = process.env;
+module.exports = {
+  // configura tu configuración de Webpack aquí
+  plugins: [new Dotenv()],
+};

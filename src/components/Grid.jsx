@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
+import "../styles/grid.css"
+
 const Grid = () => {
   const API_URL = "https://api.themoviedb.org/3/discover/movie";
   const API_KEY = "api_key=6f1b1d3f1cf45762adec641bdc6baedb";
